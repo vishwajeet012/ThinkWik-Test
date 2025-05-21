@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/db';
 import authRoutes from './routes/auth';
 import todoRoutes from './routes/todo';
-// import updateExpiredTodos from './cron/updateTodos';
+import updateExpiredTodos from './cron/updateTodos';
 
 dotenv.config();
 
@@ -19,8 +19,8 @@ connectDB();
 app.use('/api/auth', authRoutes);
 app.use('/api/todos', todoRoutes);
 
-// // Start CRON job
-// updateExpiredTodos();
+// Start CRON job
+updateExpiredTodos();
 
 // Basic route
 app.get('/', (req: Request, res: Response) => {

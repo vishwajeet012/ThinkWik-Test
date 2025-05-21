@@ -24,7 +24,7 @@ npm install
 Create a .env file in the root directory with:
 MONGO_URI=mongodb://localhost:27017/todo-api
 JWT_SECRET=your-secure-jwt-secret
-PORT=3000
+PORT=5000
 
 Build the project:
 npm run build
